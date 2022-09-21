@@ -1,0 +1,495 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock title %}
+{% block content %}
+<!-- cards -->
+<style>
+    /* cards */
+
+    hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 33px !important;
+        color: #fff;
+
+    }
+
+    .small {
+        letter-spacing: 0.5px !important;
+    }
+
+    .card {
+        box-shadow: 0px 5px 16px white;
+        transition: 0.8s;
+        background: rgb(255, 179, 0);
+        ;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 7% !important;
+
+    }
+
+
+    .card-footer {
+        border-radius: 7px !important;
+    }
+
+    .card:after {
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        z-index: 9999;
+        height: 100%;
+        pointer-events: none;
+    }
+
+
+    .card .layer {
+        position: absolute;
+        top: calc(100% - 5px);
+        width: 100%;
+        height: 100%;
+        background:  linear-gradient(rgb(255, 209, 209), red);
+        left: 0;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .card:hover {
+        box-shadow: -5px 50px 100px white;
+    }
+
+
+    .card:hover hr {
+        background-color: white;
+
+    }
+
+    .card:hover h4 {
+        font-weight: 600;
+    }
+
+    .card:hover p {
+        font-weight: 600;
+    }
+
+    .card:hover small {
+        font-weight: 600;
+    }
+
+    .card:hover .layer {
+        top: 0;
+    }
+
+    .card .content {
+        position: relative;
+        z-index: 2;
+    }
+
+
+
+    .card h4 {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    hr {
+        background-color: white;
+        width: 80% !important;
+        transition: 1s;
+    }
+
+
+    .bold {
+        font-weight: 500;
+    }
+
+    #quotes {
+        opacity: 0.1;
+        filter: alpha(opacity=40);
+    }
+
+
+    @media (max-width: 479px) {
+        p {
+            padding: 0 !important;
+        }
+
+        .img-1 {
+            margin-right: 0 !important;
+        }
+
+    }
+</style>
+
+
+<!-- download resume  -->
+{% for download in messages %}
+<div class="alert alert-light alert-dismissible fade show" role="alert">
+    Click here to <a href="static/NamanResume(2).pdf" download class=" download-btn alert-link">download</a>{{download}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+
+
+<!-- Resume  -->
+<div style="margin-top: 1%; text-align: center;color: black;" data-aos="zoom-in" data-aos-duration="2000">
+    <h2> <u style="text-decoration-color: white;text-underline-position: under;"> Education </u>
+    </h2>
+</div>
+
+
+<div style="margin-top: 5%;" class="container justify-content-center">
+    <div class=" row justify-content-center ">
+
+        <!-- card 1 -->
+
+        <div class="col-lg-6 col-12" data-aos="fade-right" data-aos-duration="3000">
+            <div class="card  ">
+                <div class="layer"></div>
+                <div class="content">
+
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row  justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <div class="card-body">
+                                    <h4 style="color: white;" class="card-title">2019</h4>
+                                    <hr><br>
+                                    <h5 class="card-subtitle mb-2 text-muted"> <b style="color: rgb(58, 57, 57);"> S.R.
+                                            Capital
+                                            Public School </b>
+                                        <hr>
+                                    </h5>
+                                </div>
+                                <p style="color: rgb(91, 91, 91);" class="bold text-center px-md-3"> Completed my
+                                    secondary
+                                    education with a respectable CBSE 10th board result. </p>
+                                <br>
+                                <div class="card-body">
+                                    <h4 style="color: white" class="card-title">2021</h4>
+                                    <hr><br>
+                                    <h5 class="card-subtitle mb-2 text-muted">
+                                        <b style="color: rgb(58, 57, 57);"> Hans Raj Senior Secondary School</b>
+
+                                    </h5>
+                                    <hr>
+                                </div>
+                                <p style="color: rgb(91, 91, 91);" class="bold text-center px-md-3"> Completed my
+                                    secondary
+                                    education with a respectable CBSE 12th board result. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- card2 -->
+        <div class="col-lg-6 col-12" data-aos="fade-left" data-aos-duration="3000">
+            <div class="card  ">
+                <div class="layer"></div>
+                <div class="content">
+
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row  justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <div class="card-body">
+                                    <h4 style="color: white;" class="card-title">2021-2025</h4>
+                                    <hr>
+                                    <br>
+                                    <h5 class="card-subtitle mb-2 text-muted">
+                                        <b style="color: rgb(58, 57, 57);"> Dr. Akhilesh Das Gupta Institute of
+                                            Technology &
+                                            Management </b>
+                                    </h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        <b style="color: black;"> affiliated to Guru Gobind Singh
+                                            Indraprastha University (GGSIPU) </b>
+                                        <hr>
+                                    </h6>
+
+
+
+                                </div>
+
+                                <p style="color: #25316D;" class="bold text-center px-md-3">
+                                <div style="color: black; margin-left: 25%;">
+                                    <ul1 style="margin-left: -22%;" class="list-group list-group-horizontal">
+                                        <li1 style="color:black ;" class="list-group"><b>Course -</b> </li1>
+                                        <li1 style="color: rgb(58, 57, 57);" class="list-group"><b> - B.tech</b></li1>
+                                        <br>
+                                        <!-- <li class="list-group">A third item</li> -->
+                                    </ul1>
+
+                                    <ul2 style="margin-left: -22%;" class="list-group list-group-horizontal">
+                                        <li2 style="color:black;" class="list-group"><b>Branch -</b> </li2>
+                                        <l2i style="color: rgb(58, 57, 57);" class="list-group"><b> - IT</b></li2>
+                                            <br>
+                                            <!-- <li class="list-group">A third item</li> -->
+                                    </ul2>
+                                    <br>
+                                    <div  style="margin-right: 30%;">
+                                    <h4 style=" color: white;"> Technology
+                                    </h4>
+                                    <hr>
+                                    
+                                    <br>
+                                </div>
+                                    <ul3 style="margin-left: -100%; color: rgb(91, 91, 91);"
+                                        class="list-group list-group-flush">
+                                        <li3 class="list-group-"><b> Front-end Development</b></li3>
+                                        <li4 class="list-group-"><b>Back-end Development</b></li4>
+                                        <li5 class="list-group-"><b> Database Management</b></li5>
+                                    </ul3>
+                                </div>
+                                </p>
+                                <br>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- rating design skills-->
+        <div>
+            <div style="margin-top: 10%; text-align: center;color:black;" data-aos="zoom-in" data-aos-duration="1000">
+                <h2> <u style="text-decoration-color: white;text-underline-position: under;"> Design Skills
+                    </u>
+                </h2>
+            </div>
+
+
+
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-down-left" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%; ">
+                    <h6>
+                        Web Design
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-up-right" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        Print Design
+                    </h6>
+                </div>
+                <div>
+                    <div style="margin-bottom: 20%;width: 40%;  height: 5% ;" class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color:rgb(255, 179, 0); width: 78%;margin-left: -3%;"><b> 75%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- rating coding skills  -->
+            <div style=" text-align: center;color: black; margin-top: 3%;" data-aos="zoom-in" data-aos-duration="1000">
+                <h2> <u style="text-decoration-color: white;text-underline-position: under;"> Coding Skills /
+                        Programming
+                        Languages
+                    </u>
+                </h2>
+            </div>
+
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-down-left" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        C (Programming Language)
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-up-right" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        C++
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-down-left" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        Java
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-up-right" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        Python
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-down-left" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        JavaScript
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-up-right" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        Django (Back-end Framework)
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-down-left" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        Bootstrap (Front-end Framework)
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-up-right" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        HTML
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: white; height: 5rem; border-radius: 2rem;padding-left: 2%"
+                data-aos="fade-down-left" data-aos-duration="2500">
+                <div style="color: rgb(58, 57, 57);margin-top: 5%; padding-top: 1%;">
+                    <h6>
+                        Cascading Styling Sheets (CSS)
+                    </h6>
+                </div>
+                <div>
+                    <div style=" margin-bottom: 2%;width: 40%; height:5% ;  " class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="100"
+                            aria-valuemax="100" style="background-color: rgb(255, 179, 0); width: 98%;margin-left: -3%;"> <b>
+                                95%
+                            </b></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+{% endblock content %}
