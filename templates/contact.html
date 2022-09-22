@@ -1,315 +1,315 @@
-{% extends 'base.html' %}
-{% block title %}
-{% endblock title %}
-{% block content %}
+    {% extends 'base.html' %}
+    {% block title %}
+    {% endblock title %}
+    {% block content %}
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-    * {
-        box-sizing: border-box
-    }
-
-
-
-
-    h2 {
-        color: navy
-    }
-
-    .text-muted {
-        font-family: 'Ubuntu', sans-serif
-    }
-
-    .fa-map-marker,
-    .fa-phone,
-    .fa-envelope {
-        font-size: 25px;
-        font-weight: bold
-    }
-
-    .icon {
-        color: rgb(105, 27, 179)
-    }
-
-    .contact:hover {
-        text-align: center;
-        border-radius: 5px;
-        cursor: pointer;
-        position: relative
-    }
-
-    .icon:hover {
-        color: black;
-    }
-
-
-    form .container {
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 20px auto
-    }
-
-    /* information box  */
-
-
-
-    input,
-    textarea,
-    .form-control {
-        outline: none;
-        border: none
-    }
-
-    .input-field {
-        border: 1px solid #ddd;
-        padding: 5px;
-        border-radius: 5px
-    }
-
-    .input-field:hover {
-        border: 2px solid #3B9AE1;
-        color: #3B9AE1;
-        cursor: pointer
-    }
-
-    label {
-        font-weight: 500
-    }
-
-    .fa-mobile {
-        font-size: 20px
-    }
-
-
-    #msg {
-        height: 220px
-    }
-
-    .btn1 {
-        background-color: red;
-        
-        margin-top: 2%;
-        width: 100%;
-        border-radius: 5px;
-
-    }
-
-    .btn1:hover {
-
-        background-color: #3da9fc;
-        color: black;
-        border-radius: 20px;
-    }
-
-
-    .mobile-info {
-        display: none
-    }
-
-    @media(min-width:992px) and (max-width:1199px) {
-        form {
-            width: 75%
+        * {
+            box-sizing: border-box
         }
 
-        .container {
-            margin-top: 50px
+
+
+
+        h2 {
+            color: navy
         }
 
-    }
-
-
-
-    @media(max-width:767px) {
-        .mobile-info {
-            display: inline
+        .text-muted {
+            font-family: 'Ubuntu', sans-serif
         }
 
-        .contact-info {
-            display: none
+        .fa-map-marker,
+        .fa-phone,
+        .fa-envelope {
+            font-size: 25px;
+            font-weight: bold
         }
 
-        .contact {
-            margin: 10px 0;
-            border: 1px solid rgb(105, 27, 179);
+        .icon {
+            color: rgb(105, 27, 179)
+        }
+
+        .contact:hover {
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative
+        }
+
+        .icon:hover {
+            color: black;
+        }
+
+
+        form .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto
+        }
+
+        /* information box  */
+
+
+
+        input,
+        textarea,
+        .form-control {
+            outline: none;
+            border: none
+        }
+
+        .input-field {
+            border: 1px solid #ddd;
+            padding: 5px;
             border-radius: 5px
         }
 
-    }
+        .input-field:hover {
+            border: 2px solid #3B9AE1;
+            color: #3B9AE1;
+            cursor: pointer
+        }
 
-    .d-md-flex1 {
-        color: #DFF7FF;
-    }
+        label {
+            font-weight: 500
+        }
 
-    .d-md-flex1:hover {
-        color: rgb(12, 224, 12);
-    }
-
-    .d-md-flex3 {
-        color: #DFF7FF;
-    }
-
-    .d-md-flex3:hover {
-        color: black;
-    }
-
-    .d-md-flex2 {
-        color: #DFF7FF;
-    }
-
-    .d-md-flex2:hover {
-        color: rgb(234, 188, 38);
-    }
-
-    .mf:hover {
-        background-color: black;
-    }
-</style>
+        .fa-mobile {
+            font-size: 20px
+        }
 
 
+        #msg {
+            height: 220px
+        }
 
-<div>
-    <form action="/contact" method="post">
-        {%csrf_token%}
-        {% for message in messages %}
-        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-            <strong></strong> {{message}}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
-        <div style="background-color: #ff5050; border-radius: 5rem;" class="container mt-xl-5 mb-5"
-            data-aos="zoom-out" data-aos-duration="2500">
-            <div class="d-flex justify-content-center pt-5">
-                <h2 style="color: #fff;" class="font-weight-bold">Get in touch!</h2>
+        .btn1 {
+            background-color: red;
+            
+            margin-top: 2%;
+            width: 100%;
+            border-radius: 5px;
+
+        }
+
+        .btn1:hover {
+
+            background-color: #3da9fc;
+            color: black;
+            border-radius: 20px;
+        }
+
+
+        .mobile-info {
+            display: none
+        }
+
+        @media(min-width:992px) and (max-width:1199px) {
+            form {
+                width: 75%
+            }
+
+            .container {
+                margin-top: 50px
+            }
+
+        }
+
+
+
+        @media(max-width:767px) {
+            .mobile-info {
+                display: inline
+            }
+
+            .contact-info {
+                display: none
+            }
+
+            .contact {
+                margin: 10px 0;
+                border: 1px solid rgb(105, 27, 179);
+                border-radius: 5px
+            }
+
+        }
+
+        .d-md-flex1 {
+            color: #DFF7FF;
+        }
+
+        .d-md-flex1:hover {
+            color: rgb(12, 224, 12);
+        }
+
+        .d-md-flex3 {
+            color: #DFF7FF;
+        }
+
+        .d-md-flex3:hover {
+            color: black;
+        }
+
+        .d-md-flex2 {
+            color: #DFF7FF;
+        }
+
+        .d-md-flex2:hover {
+            color: rgb(234, 188, 38);
+        }
+
+        .mf:hover {
+            background-color: black;
+        }
+    </style>
+
+
+
+    <div>
+        <form action="/contact" method="post">
+            {%csrf_token%}
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong></strong> {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <div class="d-flex justify-content-center text-muted"> <b style="color: black;"> Contact us for a quote,
-                    help
-                    to join the team.</b></div>
-
-
-
-            <!-- phone, location & email  -->
-            <div class="d-md-flex flex-md-row justify-content-center py-4">
-
-                <div class="d-flex1 flex-column contact px-4">
-
-                    <div class="d-md-flex1 justify-content-center icon py-2" data-aos="fade-down-right"
-                        data-aos-duration="2500"> <span class="fa-phone"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi-telephone-fill"
-                                viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                            </svg></span> <span class="mobile-info text-dark p-2 pb-3">+91 0011223344</span>
-                        <div class="contact-info"><a style="color: white; margin: auto;" href="tel:+01 180020012"> +91 0011223344</a></div>
-                    </div>
+            {% endfor %}
+            <div style="background-color: #ff5050; border-radius: 5rem;" class="container mt-xl-5 mb-5"
+                data-aos="zoom-out" data-aos-duration="2500">
+                <div class="d-flex justify-content-center pt-5">
+                    <h2 style="color: #fff;" class="font-weight-bold">Get in touch!</h2>
                 </div>
-
-
-                <div class="d-flex2 flex-column contact px-4">
-
-                    <div class="d-md-flex3 justify-content-center icon py-2" data-aos="zoom-in"
-                        data-aos-duration="2500"> <span class="fa-envelope"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg></span> <span class="mobile-info text-dark p-2 pb-3">Visit Us</span>
-                        <div class="contact-info"><a style="color: white; margin: auto;"
-                                href="https://goo.gl/maps/Zecd8YEggXyr5ER36"> Visit Us</a></div>
-                    </div>
-                </div>
-                <div class="d-flex2 flex-column contact px-4">
-
-                    <div class="d-md-flex2 justify-content-center icon py-2" data-aos="fade-down-left"
-                        data-aos-duration="2500"> <span class="fa-envelope"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi-envelope-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                            </svg></span> <span class="mobile-info text-dark p-2 pb-3">abc@gmail.com</span>
-                        <div class="contact-info"><a style="color: white; margin: auto;"
-                                href="mailto:abc@gmail.com">abc@gmail.com</a></div>
-                    </div>
-                </div>
-
-            </div>
+                <div class="d-flex justify-content-center text-muted"> <b style="color: black;"> Contact us for a quote,
+                        help
+                        to join the team.</b></div>
 
 
 
-            <!-- name, email, phone, msg  -->
-            <div class="d-flex flex-row justify-content-center">
-                <form action="https://formsubmit.co/namanb454@email.com" method="post" style="background-color: #97D2EC; border-radius: 2%;" class="w-xl-50 w-lg-75"></form>
-                <div class="container" style="background-color: #fdc91f;" >
-                    <div class="row">
-                        <div class="col-md-6" data-aos="fade-right" data-aos-duration="2500">
-                            <div class="form-group"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg><label id="name" name="name">Your Name</label>
-                                <div class="input-field" id="name" name="name"> <span
-                                        class="fa fa-user-o p-2 border-right"></span> <input placeholder="  name"
-                                        type="text" id="name" name="name" required style="width: 94%;"> </div>
-                            </div>
-                            <div class="form-group"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                                </svg> <label id="email" name="email">E-mail</label>
-                                <div class="input-field" id="email" name="email"> <span
-                                        class="fa fa-envelope-o p-2"></span> <input placeholder="  e-mail" type="email"
-                                        id="email" name="email" required style="width: 94%;"> </div>
-                            </div>
-                            <div class="form-group"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <!-- phone, location & email  -->
+                <div class="d-md-flex flex-md-row justify-content-center py-4">
+
+                    <div class="d-flex1 flex-column contact px-4">
+
+                        <div class="d-md-flex1 justify-content-center icon py-2" data-aos="fade-down-right"
+                            data-aos-duration="2500"> <span class="fa-phone"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi-telephone-fill"
+                                    viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
                                         d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                </svg><label id="phone" name="phone">Phone</label>
-                                <div class="input-field" id="phone" name="phone"> <span class="fa fa-mobile p-2"></span>
-                                    <input placeholder="  phone" type="tel" id="phone" name="phone" required
-                                        style="width: 94%;">
+                                </svg></span> <span class="mobile-info text-dark p-2 pb-3">+91 0011223344</span>
+                            <div class="contact-info"><a style="color: white; margin: auto;" href="tel:+01 180020012"> +91 0011223344</a></div>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex2 flex-column contact px-4">
+
+                        <div class="d-md-flex3 justify-content-center icon py-2" data-aos="zoom-in"
+                            data-aos-duration="2500"> <span class="fa-envelope"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg></span> <span class="mobile-info text-dark p-2 pb-3">Visit Us</span>
+                            <div class="contact-info"><a style="color: white; margin: auto;"
+                                    href="https://goo.gl/maps/Zecd8YEggXyr5ER36"> Visit Us</a></div>
+                        </div>
+                    </div>
+                    <div class="d-flex2 flex-column contact px-4">
+
+                        <div class="d-md-flex2 justify-content-center icon py-2" data-aos="fade-down-left"
+                            data-aos-duration="2500"> <span class="fa-envelope"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                </svg></span> <span class="mobile-info text-dark p-2 pb-3">abc@gmail.com</span>
+                            <div class="contact-info"><a style="color: white; margin: auto;"
+                                    href="mailto:abc@gmail.com">abc@gmail.com</a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- name, email, phone, msg  -->
+                <div class="d-flex flex-row justify-content-center">
+                    <form action="https://formsubmit.co/namanb454@email.com" method="post" style="background-color: #97D2EC; border-radius: 2%;" class="w-xl-50 w-lg-75"></form>
+                    <div class="container" style="background-color: #fdc91f;" >
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-duration="2500">
+                                <div class="form-group"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                    </svg><label id="name" name="name">Your Name</label>
+                                    <div class="input-field" id="name" name="name"> <span
+                                            class="fa fa-user-o p-2 border-right"></span> <input placeholder="  name"
+                                            type="text" id="name" name="name" required style="width: 94%;"> </div>
+                                </div>
+                                <div class="form-group"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                    </svg> <label id="email" name="email">E-mail</label>
+                                    <div class="input-field" id="email" name="email"> <span
+                                            class="fa fa-envelope-o p-2"></span> <input placeholder="  e-mail" type="email"
+                                            id="email" name="email" required style="width: 94%;"> </div>
+                                </div>
+                                <div class="form-group"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                    </svg><label id="phone" name="phone">Phone</label>
+                                    <div class="input-field" id="phone" name="phone"> <span class="fa fa-mobile p-2"></span>
+                                        <input placeholder="  phone" type="tel" id="phone" name="phone" required
+                                            style="width: 94%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-left" data-aos-duration="2500">
+                                <div class="form-group"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                    </svg><label id="content" name="content">Message</label>
+                                    <div class="input-field bg-light" id="content" name="content"> <textarea name="content"
+                                            id="content" cols="10" rows="9" class="form-control bg-light"
+                                            placeholder="How May I Help You"></textarea> </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6" data-aos="fade-left" data-aos-duration="2500">
-                            <div class="form-group"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
-                                </svg><label id="content" name="content">Message</label>
-                                <div class="input-field bg-light" id="content" name="content"> <textarea name="content"
-                                        id="content" cols="10" rows="9" class="form-control bg-light"
-                                        placeholder="How May I Help You"></textarea> </div>
-                            </div>
-                        </div>
+
+
+                        <input id="submit" class="btn1 btn-primary" type="submit" value="Submit">
+                        <!-- <form action="https://formsubmit.co/namanb454@gmail.com" method="POST">
+                            <input type="text" name="name" id="name" required>
+                            <button type="submit">send</button>
+                        </form> -->
+                        
+
+
+
                     </div>
-
-
-                    <input id="submit" class="btn1 btn-primary" type="submit" value="Submit">
-                    <!-- <form action="https://formsubmit.co/namanb454@gmail.com" method="POST">
-                        <input type="text" name="name" id="name" required>
-                        <button type="submit">send</button>
-                    </form> -->
-                    
-
-
-
                 </div>
+
+
+
+
+
+
             </div>
+    </div>
+    </div>
+    </div>
+
+
+    </form>
 
 
 
-
-
-
-        </div>
-</div>
-</div>
-</div>
-
-
-</form>
-
-
-
-{% endblock content %}
+    {% endblock content %}
